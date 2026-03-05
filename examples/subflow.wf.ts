@@ -5,7 +5,6 @@ const flow: FlowDefinition = {
 };
 
 function stateFirst(): StateFunction<unknown> {
-
-  execSubflow("called.wf.ts", "")
-  return finish("done")
+  let resp = execSubflow("/examples/called.wf.ts", "DATA IN");
+  return finish(resp);
 }
