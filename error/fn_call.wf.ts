@@ -7,7 +7,7 @@ const flow: FlowDefinition = {
 test()
 
 function stateFirst(): StateFunction<unknown> {
-    finish("done")
+  return finish("done")
 }
 
 function test() {

@@ -5,9 +5,9 @@ const flow: FlowDefinition = {
 };
 
 function stateFirst(): StateFunction<unknown> {
-    getSecret()
-    getSecret(100)
-    getSecret("does_not_exist")
+  getSecret()
+  getSecret(100)
+  getSecret("does_not_exist")
 
-    finish("done")
+  return finish("done")
 }

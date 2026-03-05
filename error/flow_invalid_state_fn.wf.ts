@@ -5,5 +5,5 @@ const flow: FlowDefinition = {
 };
 
 function stateFirst(): StateFunction<unknown> {
-    finish("done")
+  returnfinish("done")
 }
