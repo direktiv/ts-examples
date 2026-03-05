@@ -5,12 +5,17 @@ const flow: FlowDefinition = {
 };
 
 function stateFirst(): StateFunction<unknown> {
+  const r = fetchSync("https://v2.jokeapi.dev/joke/Any?type=single");
 
+  const json = JSON.stringify(r);
+  log(json);
 
-  fetchSync("https://v2.jokeapi.dev/joke/Any?type=single")
+  // access headers
+  log(r["headers"]["Content-Length"]);
 
+  // access body
+  log(r.json()["joke"]);
+  log("This", "is", "the", "text", r.text());
 
-// https://v2.jokeapi.dev/joke/Any?type=single
-
-  return finish({ data: "hello world" })  
+  return finish({ joke: r.json()["joke"] });
 }
