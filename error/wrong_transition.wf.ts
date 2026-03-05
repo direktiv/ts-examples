@@ -11,7 +11,7 @@ function stateFirst(): StateFunction<unknown> {
 }
 
 function stateSecond(): StateFunction<unknown> {
-    finish("done")
+    return finish("done")
 }
 
 function test() {
