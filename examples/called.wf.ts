@@ -5,14 +5,5 @@ const flow: FlowDefinition = {
 };
 
 function stateFirst(): StateFunction<unknown> {
-
-  // logs instance id
-  log(id())
-
-  log(now().unix())
-
-  const n = now()
-  log(n.format("2006-01-02 15:04:05"))
-
-  return finish("done")
+  return finish(now().unix())
 }
