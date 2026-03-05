@@ -5,15 +5,9 @@ const flow: FlowDefinition = {
 };
 
 function stateFirst(): StateFunction<unknown> {
-    test()
+    getSecret()
+    getSecret(100)
+    getSecret("does_not_exist")
 
-    return transition(stateSecond, "")
-}
-
-function stateSecond(): StateFunction<unknown> {
     finish("done")
-}
-
-function test() {
-    return transition(stateSecond, "")
 }
